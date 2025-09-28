@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(page_title="Bank Churners Dashboard", layout="wide")
@@ -15,7 +12,7 @@ st.sidebar.markdown("Created by [Omar Zahran](https://www.linkedin.com/in/omarza
 # ---------------- LOAD DATA ----------------
 @st.cache_data
 def load_data():
-    data = pd.read_csv(r"D:\Power Bi @ITI\Python Visualization\Project\BankChurners.csv")
+    data = pd.read_csv("BankChurners.csv")  
     data = data.drop([
         "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",
         "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
